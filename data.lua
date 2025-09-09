@@ -182,8 +182,8 @@ data:extend(
             priority = "extra-high",
             width = 64,
             height = 128,
-            variation_count = 1,
-            line_length = 1,
+            variation_count = 16,
+            line_length = 16,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -192,7 +192,7 @@ data:extend(
             priority = "extra-high",
             width = 98,
             height = 60,
-            repeat_count = 1,
+            repeat_count = 16,
             shift = util.by_pixel(10, 17),
             draw_as_shadow = true,
             scale = 0.5
@@ -208,8 +208,8 @@ data:extend(
             priority = "extra-high",
             width = 64,
             height = 128,
-            variation_count = 1,
-            line_length = 1,
+            variation_count = 16,
+            line_length = 16,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -218,7 +218,7 @@ data:extend(
             priority = "extra-high",
             width = 98,
             height = 110,
-            repeat_count = 1,
+            repeat_count = 16,
             shift = util.by_pixel(10, 29),
             draw_as_shadow = true,
             scale = 0.5
@@ -234,8 +234,8 @@ data:extend(
             priority = "extra-high",
             width = 64,
             height = 128,
-            variation_count = 1,
-            line_length = 1,
+            variation_count = 16,
+            line_length = 16,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -244,7 +244,7 @@ data:extend(
             priority = "extra-high",
             width = 124,
             height = 68,
-            repeat_count = 1,
+            repeat_count = 16,
             shift = util.by_pixel(14, 15),
             draw_as_shadow = true,
             scale = 0.5
@@ -260,8 +260,8 @@ data:extend(
             priority = "extra-high",
             width = 64,
             height = 128,
-            variation_count = 1,
-            line_length = 1,
+            variation_count = 16,
+            line_length = 16,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -270,7 +270,7 @@ data:extend(
             priority = "extra-high",
             width = 124,
             height = 120,
-            repeat_count = 1,
+            repeat_count = 16,
             shift = util.by_pixel(17, 28),
             draw_as_shadow = true,
             scale = 0.5
@@ -286,8 +286,8 @@ data:extend(
             priority = "extra-high",
             width = 64,
             height = 128,
-            variation_count = 1,
-            line_length = 1,
+            variation_count = 16,
+            line_length = 16,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -296,7 +296,7 @@ data:extend(
             priority = "extra-high",
             width = 102,
             height = 120,
-            repeat_count = 1,
+            repeat_count = 16,
             shift = util.by_pixel(9, 28),
             draw_as_shadow = true,
             scale = 0.5
@@ -312,8 +312,8 @@ data:extend(
             priority = "extra-high",
             width = 64,
             height = 128,
-            variation_count = 1,
-            line_length = 1,
+            variation_count = 16,
+            line_length = 16,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -322,7 +322,7 @@ data:extend(
             priority = "extra-high",
             width = 124,
             height = 120,
-            repeat_count = 1,
+            repeat_count = 16,
             shift = util.by_pixel(14, 28),
             draw_as_shadow = true,
             scale = 0.5
@@ -338,8 +338,8 @@ data:extend(
             priority = "extra-high",
             width = 64,
             height = 128,
-            variation_count = 1,
-            line_length = 1,
+            variation_count = 16,
+            line_length = 16,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -348,7 +348,7 @@ data:extend(
             priority = "extra-high",
             width = 124,
             height = 68,
-            repeat_count = 1,
+            repeat_count = 16,
             shift = util.by_pixel(17, 15),
             draw_as_shadow = true,
             scale = 0.5
@@ -364,8 +364,8 @@ data:extend(
             priority = "extra-high",
             width = 64,
             height = 128,
-            variation_count = 1,
-            line_length = 1,
+            variation_count = 16,
+            line_length = 16,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -374,7 +374,7 @@ data:extend(
             priority = "extra-high",
             width = 102,
             height = 68,
-            repeat_count = 1,
+            repeat_count = 16,
             shift = util.by_pixel(9, 15),
             draw_as_shadow = true,
             scale = 0.5
@@ -387,8 +387,8 @@ data:extend(
         priority = "extra-high",
         width = 48,
         height = 56,
-        variation_count = 1,
-        line_length = 1,
+        variation_count = 8,
+        line_length = 8,
         shift = util.by_pixel(0, -1),
         scale = 0.5
       },
