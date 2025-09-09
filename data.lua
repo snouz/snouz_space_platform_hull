@@ -88,7 +88,7 @@ data:extend(
   {
     type = "wall",
     name = "snouz_wall_hull",
-    icon = graphics .. "/technology/snouz_wall_hull.png",
+    icon = graphics .. "/icons/snouz_wall_hull.png",
     flags = {"placeable-neutral", "player-creation"},
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -145,29 +145,29 @@ data:extend(
       {
         type = "physical",
         decrease = 3,
-        percent = 20
+        percent = 15
       },
       {
         type = "impact",
-        decrease = 45,
-        percent = 60
+        decrease = 55,
+        percent = 96
       },
       {
         type = "explosion",
-        decrease = 10,
-        percent = 30
+        decrease = 5,
+        percent = 10
       },
       {
         type = "fire",
-        percent = 100
+        percent = 40
       },
       {
         type = "acid",
-        percent = 80
+        percent = 5
       },
       {
         type = "laser",
-        percent = 70
+        percent = 40
       }
     },
     visual_merge_group = 0, -- different walls will visually connect to each other if their merge group is same (defaults to 0)
@@ -181,10 +181,10 @@ data:extend(
             filename = ENTITYPATH .. "wall/wall-single.png",
             priority = "extra-high",
             width = 64,
-            height = 86,
-            variation_count = 2,
-            line_length = 2,
-            shift = util.by_pixel(0, -5),
+            height = 128,
+            variation_count = 1,
+            line_length = 1,
+            shift = util.by_pixel(0, 7),
             scale = 0.5
           },
           {
@@ -192,7 +192,7 @@ data:extend(
             priority = "extra-high",
             width = 98,
             height = 60,
-            repeat_count = 2,
+            repeat_count = 1,
             shift = util.by_pixel(10, 17),
             draw_as_shadow = true,
             scale = 0.5
@@ -207,10 +207,10 @@ data:extend(
             filename = ENTITYPATH .. "wall/wall-vertical.png",
             priority = "extra-high",
             width = 64,
-            height = 134,
-            variation_count = 5,
-            line_length = 5,
-            shift = util.by_pixel(0, 8),
+            height = 128,
+            variation_count = 1,
+            line_length = 1,
+            shift = util.by_pixel(0, 7),
             scale = 0.5
           },
           {
@@ -218,7 +218,7 @@ data:extend(
             priority = "extra-high",
             width = 98,
             height = 110,
-            repeat_count = 5,
+            repeat_count = 1,
             shift = util.by_pixel(10, 29),
             draw_as_shadow = true,
             scale = 0.5
@@ -233,10 +233,10 @@ data:extend(
             filename = ENTITYPATH .. "wall/wall-horizontal.png",
             priority = "extra-high",
             width = 64,
-            height = 92,
-            variation_count = 6,
-            line_length = 6,
-            shift = util.by_pixel(0, -2),
+            height = 128,
+            variation_count = 1,
+            line_length = 1,
+            shift = util.by_pixel(0, 7),
             scale = 0.5
           },
           {
@@ -244,7 +244,7 @@ data:extend(
             priority = "extra-high",
             width = 124,
             height = 68,
-            repeat_count = 6,
+            repeat_count = 1,
             shift = util.by_pixel(14, 15),
             draw_as_shadow = true,
             scale = 0.5
@@ -260,8 +260,8 @@ data:extend(
             priority = "extra-high",
             width = 64,
             height = 128,
-            variation_count = 2,
-            line_length = 2,
+            variation_count = 1,
+            line_length = 1,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -270,7 +270,7 @@ data:extend(
             priority = "extra-high",
             width = 124,
             height = 120,
-            repeat_count = 2,
+            repeat_count = 1,
             shift = util.by_pixel(17, 28),
             draw_as_shadow = true,
             scale = 0.5
@@ -285,9 +285,9 @@ data:extend(
             filename = ENTITYPATH .. "wall/wall-corner-left.png",
             priority = "extra-high",
             width = 64,
-            height = 134,
-            variation_count = 2,
-            line_length = 2,
+            height = 128,
+            variation_count = 1,
+            line_length = 1,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -296,7 +296,7 @@ data:extend(
             priority = "extra-high",
             width = 102,
             height = 120,
-            repeat_count = 2,
+            repeat_count = 1,
             shift = util.by_pixel(9, 28),
             draw_as_shadow = true,
             scale = 0.5
@@ -311,9 +311,9 @@ data:extend(
             filename = ENTITYPATH .. "wall/wall-t.png",
             priority = "extra-high",
             width = 64,
-            height = 134,
-            variation_count = 4,
-            line_length = 4,
+            height = 128,
+            variation_count = 1,
+            line_length = 1,
             shift = util.by_pixel(0, 7),
             scale = 0.5
           },
@@ -322,7 +322,7 @@ data:extend(
             priority = "extra-high",
             width = 124,
             height = 120,
-            repeat_count = 4,
+            repeat_count = 1,
             shift = util.by_pixel(14, 28),
             draw_as_shadow = true,
             scale = 0.5
@@ -337,10 +337,10 @@ data:extend(
             filename = ENTITYPATH .. "wall/wall-ending-right.png",
             priority = "extra-high",
             width = 64,
-            height = 92,
-            variation_count = 2,
-            line_length = 2,
-            shift = util.by_pixel(0, -3),
+            height = 128,
+            variation_count = 1,
+            line_length = 1,
+            shift = util.by_pixel(0, 7),
             scale = 0.5
           },
           {
@@ -348,7 +348,7 @@ data:extend(
             priority = "extra-high",
             width = 124,
             height = 68,
-            repeat_count = 2,
+            repeat_count = 1,
             shift = util.by_pixel(17, 15),
             draw_as_shadow = true,
             scale = 0.5
@@ -363,10 +363,10 @@ data:extend(
             filename = ENTITYPATH .. "wall/wall-ending-left.png",
             priority = "extra-high",
             width = 64,
-            height = 92,
-            variation_count = 2,
-            line_length = 2,
-            shift = util.by_pixel(0, -3),
+            height = 128,
+            variation_count = 1,
+            line_length = 1,
+            shift = util.by_pixel(0, 7),
             scale = 0.5
           },
           {
@@ -374,7 +374,7 @@ data:extend(
             priority = "extra-high",
             width = 102,
             height = 68,
-            repeat_count = 2,
+            repeat_count = 1,
             shift = util.by_pixel(9, 15),
             draw_as_shadow = true,
             scale = 0.5
@@ -387,13 +387,13 @@ data:extend(
         priority = "extra-high",
         width = 48,
         height = 56,
-        variation_count = 8,
-        line_length = 8,
+        variation_count = 1,
+        line_length = 1,
         shift = util.by_pixel(0, -1),
         scale = 0.5
       },
-      water_connection_patch =
-      {
+      water_connection_patch = util.empty_sprite(),
+      --[[{
         sheets =
         {
           {
@@ -414,7 +414,7 @@ data:extend(
             scale = 0.5
           }
         }
-      },
+      },]]
       gate_connection_patch =
       {
         sheets =
