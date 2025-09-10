@@ -149,8 +149,8 @@ data:extend(
       },
       {
         type = "impact",
-        decrease = 55,
-        percent = 96
+        decrease = 120,
+        percent = 99
       },
       {
         type = "explosion",
@@ -170,7 +170,7 @@ data:extend(
         percent = 40
       }
     },
-    visual_merge_group = 0, -- different walls will visually connect to each other if their merge group is same (defaults to 0)
+    visual_merge_group = 17, -- different walls will visually connect to each other if their merge group is same (defaults to 0)
     pictures =
     {
       single =
@@ -230,11 +230,16 @@ data:extend(
         layers =
         {
           {
-            filename = ENTITYPATH .. "wall/wall-horizontal.png",
+            filenames = {
+              ENTITYPATH .. "wall/wall-horizontal.png",
+              ENTITYPATH .. "wall/wall-horizontal-2.png",
+            },
+            lines_per_file = 1,
+            --filename = ENTITYPATH .. "wall/wall-horizontal.png",
             priority = "extra-high",
             width = 64,
             height = 128,
-            variation_count = 16,
+            variation_count = 32,
             line_length = 16,
             shift = util.by_pixel(0, 7),
             scale = 0.5
@@ -244,7 +249,7 @@ data:extend(
             priority = "extra-high",
             width = 124,
             height = 68,
-            repeat_count = 16,
+            repeat_count = 32,
             shift = util.by_pixel(14, 15),
             draw_as_shadow = true,
             scale = 0.5
@@ -383,11 +388,22 @@ data:extend(
       },
       filling =
       {
-        filename = ENTITYPATH .. "wall/wall-filling.png",
+        filenames = {
+          ENTITYPATH .. "wall/wall-filling.png",
+          ENTITYPATH .. "wall/wall-filling-2.png",
+          ENTITYPATH .. "wall/wall-filling-3.png",
+          ENTITYPATH .. "wall/wall-filling-4.png",
+          ENTITYPATH .. "wall/wall-filling-5.png",
+          ENTITYPATH .. "wall/wall-filling-6.png",
+          ENTITYPATH .. "wall/wall-filling-7.png",
+          ENTITYPATH .. "wall/wall-filling-8.png",
+        },
+        lines_per_file = 1,
+        --filename = ENTITYPATH .. "wall/wall-filling.png",
         priority = "extra-high",
         width = 48,
         height = 56,
-        variation_count = 8,
+        variation_count = 64,
         line_length = 8,
         shift = util.by_pixel(0, -1),
         scale = 0.5
