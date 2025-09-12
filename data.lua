@@ -13,15 +13,15 @@ data:extend(
     type = "item",
     name = "snouz_wall_hull",
     icon = graphics .. "/icons/snouz_wall_hull.png",
-    --subgroup = "turret",
-    --order = "b[turret]-az[gun-turret]",
+    subgroup = "space-platform",
+    order = "g[snouz_wall_hull]",
     inventory_move_sound = item_sounds.turret_inventory_move,
     pick_sound = item_sounds.turret_inventory_pickup,
     drop_sound = item_sounds.turret_inventory_move,
     place_result = "snouz_wall_hull",
     --default_import_location = "fulgora",
-    stack_size = 50,
-    weight = 20 * kg
+    stack_size = 100,
+    weight = 10 * kg
   },
 
   {
@@ -30,12 +30,14 @@ data:extend(
     --icon = graphics .. "/icons/snouz_wall_hull.png",
     --category = "electromagnetics",
     always_show_made_in = true,
-    energy_required = 16,
+    energy_required = 10,
     enabled = false,
     allow_productivity = false,
     ingredients =
     {
-      {type = "item", name = "stone-wall", amount = 2},
+      {type = "item", name = "stone-wall", amount = 1},
+      {type = "item", name = "carbon-fiber", amount = 1},
+      {type = "item", name = "space-platform-foundation", amount = 1},
     },
     results = {
       {type = "item", name = "snouz_wall_hull", amount = 1},
@@ -61,7 +63,7 @@ data:extend(
         recipe = "snouz_wall_hull"
       }
     },
-    prerequisites = {}, --"tungsten-carbide", "electromagnetic-plant"
+    prerequisites = {"carbon-fiber"}, --"tungsten-carbide", "electromagnetic-plant"
     unit =
     {
       count = 1000,
@@ -71,18 +73,47 @@ data:extend(
         {"logistic-science-pack", 1},
         {"military-science-pack", 1},
         {"chemical-science-pack", 1},
-        --{"production-science-pack", 1},
-        --{"utility-science-pack", 1},
-        --{"space-science-pack", 1},
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
         --{"metallurgic-science-pack", 1},
         --{"electromagnetic-science-pack", 1},
-        --{"agricultural-science-pack", 1},
+        {"agricultural-science-pack", 1},
         --{"cryogenic-science-pack", 1},
         --{"promethium-science-pack", 1}
-        
       },
       time = 60
     },
+  },
+
+  {
+    type = "corpse",
+    name = "snouz_wall_hull-remnants",
+    localised_name = {"remnant-name", {"entity-name.snouz_wall_hull"}},
+    icon = graphics .. "/icons/snouz_wall_hull.png",
+    hidden_in_factoriopedia = true,
+    flags = {"placeable-neutral", "not-on-map"},
+    subgroup = "defensive-structure-remnants",
+    order = "a-a-b",
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    tile_width = 1,
+    tile_height = 1,
+    selectable_in_game = false,
+    time_before_removed = 60 * 60 * 15, -- 15 minutes
+    expires = false,
+    final_render_layer = "remnants",
+    remove_on_tile_placement = false,
+    animation = make_rotated_animation_variations_from_sheet(4,
+    {
+      filename = ENTITYPATH .. "wall/remnants/wall-remnants.png",
+      width = 118,
+      height = 114,
+      line_length = 1,
+      direction_count = 2,
+      shift = util.by_pixel(3, 7.5), --was 3.5
+      scale = 0.5
+    })
   },
 
   {
@@ -93,17 +124,29 @@ data:extend(
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = hit_effects.wall(),
-    minable = {mining_time = 0.2, result = "snouz_wall_hull"},
+    minable = {mining_time = 0.1, result = "snouz_wall_hull"},
     fast_replaceable_group = "wall",
-    max_health = 350,
-    repair_speed_modifier = 2,
-    corpse = "wall-remnants",
+    max_health = 450,
+    repair_speed_modifier = 0.1, --2
+    corpse = "snouz_wall_hull-remnants",
     dying_explosion = "wall-explosion",
     repair_sound = sounds.manual_repair,
     mined_sound = sounds.deconstruct_bricks(0.8),
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
-    impact_category = "stone",
+    impact_category = "metal",
+    map_color = {152, 142, 131},
+
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+
+
     -- this kind of code can be used for having walls mirror the effect
     -- there can be multiple reaction items
     --attack_reaction =
@@ -155,19 +198,19 @@ data:extend(
       {
         type = "explosion",
         decrease = 5,
-        percent = 10
+        percent = 9
       },
       {
         type = "fire",
-        percent = 40
+        percent = 30
       },
       {
         type = "acid",
-        percent = 5
+        percent = 1
       },
       {
         type = "laser",
-        percent = 40
+        percent = 30
       }
     },
     visual_merge_group = 17, -- different walls will visually connect to each other if their merge group is same (defaults to 0)
