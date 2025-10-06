@@ -197,8 +197,8 @@ data:extend(
       },
       {
         type = "explosion",
-        decrease = 5,
-        percent = 9
+        decrease = 100,
+        percent = 98
       },
       {
         type = "fire",
